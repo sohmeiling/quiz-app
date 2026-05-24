@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_quiz.css') }}">
+    <title>Quiz</title>
+</head>
+<body>
+    <main class="card">
+        <h1>Choose a quiz</h1>
+        <form method="post" action="{{ url_for('index') }}">
+            <label for="quiz">Quiz topic</label>
+            <select name="quiz" id="quiz" required>
+                {% for id, name in q_list %}
+                    <option value="{{ id }}">{{ name }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Start">
+        </form>
+    </main>
+</body>
+</html>

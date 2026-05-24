@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_quiz.css') }}">
+    <title>Quiz result</title>
+</head>
+<body>
+    <main class="card">
+        <h1>Quiz result</h1>
+        <p class="score">Correct answers: {{ answers }} out of {{ total }}</p>
+        <a class="button" href="{{ url_for('index') }}">Try another quiz</a>
+    </main>
+</body>
+</html>
